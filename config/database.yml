@@ -1,0 +1,24 @@
+
+
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  pool: 5
+  host: localhost
+  username: postgres
+  password: root
+
+development:
+  <<: *default
+  database: CurriculumXD_development
+
+test:
+  <<: *default
+  database: CurriculumXD_test
+
+
+production:
+  <<: *default
+  database: CurriculumXD_production
+  username: CurriculumXD
+  password: <%= ENV['CURRICULUMXD_DATABASE_PASSWORD'] %>
