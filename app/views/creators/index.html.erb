@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Creators</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Birthday</th>
+      <th>Description</th>
+      <th>Cpf</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @creators.each do |creator| %>
+      <tr>
+        <td><%= creator.name %></td>
+        <td><%= creator.birthday %></td>
+        <td><%= creator.description %></td>
+        <td><%= creator.cpf %></td>
+        <td><%= creator.email %></td>
+        <td><%= link_to 'Show', creator %></td>
+        <td><%= link_to 'Edit', edit_creator_path(creator) %></td>
+        <td><%= link_to 'Destroy', creator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Creator', new_creator_path %>
