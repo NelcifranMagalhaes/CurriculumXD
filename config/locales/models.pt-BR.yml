@@ -1,0 +1,32 @@
+pt-BR:
+  activerecord:
+    models:
+      academy: Educação 
+      creator: Currículo
+      experience: Experiência
+      language: Língua
+
+    attributes:  
+      academy:
+        name: Nome
+        note: Descrição
+        begin_date: Data inicial
+        end_date: Data final
+
+      creator:
+        name: Nome
+        birthday: Data de Nascimento
+        description: Descrição
+        cpf: Cpf
+        email: Email
+
+      experience:
+        name: Nome
+        begin_date: Data inicial
+        end_date: Data final
+        note: Descrição
+        address: Endereço
+
+      language:
+        name: Nome
+        level: Nível
