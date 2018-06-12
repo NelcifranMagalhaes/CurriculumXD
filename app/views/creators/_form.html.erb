@@ -1,42 +1,44 @@
-<%= form_with(model: creator, local: true) do |form| %>
-  <% if creator.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(creator.errors.count, "error") %> prohibited this creator from being saved:</h2>
+<%= simple_form_for @creator ,class: "needs-validation" do |form| %>
 
-      <ul>
-      <% creator.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <div class="row">
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
+              <div class="col-md-6 mb-3">
+                <%= form.input :name ,class: "form-control"%>
+                <div class="invalid-feedback">
+                  Valid first name is required.
+                </div>
+              </div>              
 
-  <div class="field">
-    <%= form.label :birthday %>
-    <%= form.text_field :birthday %>
-  </div>
+              <div class="col-md-6 mb-3">
+                <%= form.input :birthday,class: "form-control" %>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
-  </div>
+                <div class="invalid-feedback">
+                  Valid first name is required.
+                </div>
+              </div>
 
-  <div class="field">
-    <%= form.label :cpf %>
-    <%= form.text_field :cpf %>
-  </div>
+              <div class="col-md-6 mb-3">
+                <%= form.input :description ,class: "form-control"%>
+                <div class="invalid-feedback">
+                  Valid first name is required.
+                </div>
+              </div>              
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
+              <div class="col-md-6 mb-3">
+                <%= form.input :cpf ,class: "form-control"%>
+                <div class="invalid-feedback">
+                  Valid first name is required.
+                </div>
+              </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+              <div class="col-md-6 mb-3">
+                <%= form.input :email ,class: "form-control"%>
+                <div class="invalid-feedback">
+                  Valid first name is required.
+                </div>
+              </div>
+
+            <hr class="mb-4">
+            <%= form.button :submit ,class: "btn btn-primary btn-lg btn-block" %>
+</div>
 <% end %>
