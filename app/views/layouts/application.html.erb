@@ -25,51 +25,45 @@
             <div class="sidebar-wrapper">
                 <ul class="nav">
                     <li class="nav-item active ">
-                        <a class="nav-link" href="../examples/dashboard.html">
+                        <a class="nav-link" >
                             <i class="material-icons">dashboard</i>
                             <p>Dashboard</p>
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="../examples/user.html">
+                        <a class="nav-link">
                             <i class="material-icons">person</i>
                             <p>User Profile</p>
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="../examples/table.html">
+                        <a class="nav-link">
                             <i class="material-icons">content_paste</i>
                             <p>Table List</p>
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="../examples/typography.html">
+                        <a class="nav-link">
                             <i class="material-icons">library_books</i>
                             <p>Typography</p>
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="../examples/icons.html">
+                        <a class="nav-link">
                             <i class="material-icons">bubble_chart</i>
                             <p>Icons</p>
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="../examples/maps.html">
+                        <a class="nav-link">
                             <i class="material-icons">location_ons</i>
                             <p>Maps</p>
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="../examples/notifications.html">
+                        <a class="nav-link">
                             <i class="material-icons">notifications</i>
                             <p>Notifications</p>
-                        </a>
-                    </li>
-                    <li class="nav-item active-pro">
-                        <a class="nav-link" href="../examples/upgrade.html">
-                            <i class="material-icons">unarchive</i>
-                            <p>Upgrade to PRO</p>
                         </a>
                     </li>
                 </ul>
@@ -151,33 +145,20 @@
                     <nav class="pull-left">
                         <ul>
                             <li>
-                                <a href="https://www.creative-tim.com">
-                                    Creative Tim
-                                </a>
+                                <%= link_to("Github", "https://github.com/NelcifranMagalhaes") %>
                             </li>
+
                             <li>
-                                <a href="http://presentation.creative-tim.com">
-                                    About Us
-                                </a>
-                            </li>
-                            <li>
-                                <a href="http://blog.creative-tim.com">
-                                    Blog
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.creative-tim.com/license">
-                                    Licenses
-                                </a>
+                                <%= link_to("Linkedin", "https://www.linkedin.com/in/nelcifranpires/") %>
                             </li>
                         </ul>
                     </nav>
-                    <div class="copyright pull-right">
+                    <div class="copyright ">
                         &copy;
                         <script>
                             document.write(new Date().getFullYear())
-                        </script>, made with love by
-                        <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
+                        </script>, made for
+                        <%= link_to("Nelcifran", "https://www.linkedin.com/in/nelcifranpires/") %>
                     </div>
                 </div>
             </footer>
