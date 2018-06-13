@@ -1,35 +1,45 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Creators</h1>
+<h4>Creators</h4>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Birthday</th>
-      <th>Description</th>
-      <th>Cpf</th>
-      <th>Email</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="col-md-12">
+    <div class="card card-plain">
+        <div class="card-header card-header-primary">
+            <h4 class="card-title mt-0"> Curriculos Feitos</h4>
+            <p class="card-category">Apenas uma tabela com todos os curriculos feitos</p>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead class="">
+                        <th>
+                            Nome
+                        </th>
+                          <th>
+                            Data de Nascimento
+                        </th>
+                          <th>
+                            Email
+                        </th>
+                          <th colspan="3">Ações</th>
 
-  <tbody>
-    <% @creators.each do |creator| %>
-      <tr>
-        <td><%= creator.name %></td>
-        <td><%= creator.birthday %></td>
-        <td><%= creator.description %></td>
-        <td><%= creator.cpf %></td>
-        <td><%= creator.email %></td>
-        <td><%= link_to 'Show', creator %></td>
-        <td><%= link_to 'Edit', edit_creator_path(creator) %></td>
-        <td><%= link_to 'Destroy', creator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+                    </thead>
+                        <tbody>
+                          <% @creators.each do |creator| %>
+                            <tr>
+                              <td><%= creator.name %></td>
+                              <td><%= creator.birthday %></td>
+                              <td><%= creator.email %></td>
+                              <td><%= link_to 'Ver', creator,class:"btn btn-link" %></td>
+                              <td><%= link_to 'Editar', edit_creator_path(creator),class:"btn btn-link" %></td>
+                              <td><%= link_to 'Deletar', creator,class:"btn btn-link", method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
+                            </tr>
+                          <% end %>
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
 
-<br>
-
-<%= link_to 'New Creator', new_creator_path %>
+<%= link_to 'Novo Curriculo', new_creator_path,class: "btn btn-success" %>

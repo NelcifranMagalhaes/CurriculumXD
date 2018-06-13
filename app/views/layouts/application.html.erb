@@ -29,6 +29,7 @@
                             <i class="material-icons">dashboard</i>
                             <p>Dashboard</p>
                         </a>
+
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link">
@@ -37,10 +38,10 @@
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link">
+                        <%= link_to creators_path,class: "nav-link" do %>
                             <i class="material-icons">content_paste</i>
-                            <p>Table List</p>
-                        </a>
+                            Lista de Curriculos
+                        <% end %>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link">
