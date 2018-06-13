@@ -9,8 +9,8 @@
                 </div>
               </div>              
 
-              <div class="col-md-6 mb-3">
-                <%= form.input :birthday,class: "form-control" %>
+              <div class="col-md-3 mb-3">
+                <%= form.input :birthday,as: :date,html5: true,class: "form-control" %>
 
                 <div class="invalid-feedback">
                   Valid first name is required.
@@ -37,6 +37,58 @@
                   Valid first name is required.
                 </div>
               </div>
+              
+            <div col-md-12">
+  
+              <h4>Educação</h4>
+
+              <div id="academies">
+                <%= form.simple_fields_for :academies do |academy| %>
+                  <%= render 'academy_fields', f: academy %>
+                <% end %>
+              </div>
+
+              <div class="links">
+                <%= link_to_add_association '+Educação', form, :academies,class: "btn btn-primary"%>
+                <br><br>
+              </div>
+            </div>
+
+            <div col-md-12">
+  
+              <h4>Experiência</h4>
+
+              <div id="experiences">
+                <%= form.simple_fields_for :experiences do |xp| %>
+                  <%= render 'experience_fields', f: xp %>
+                <% end %>
+              </div>
+
+              <div class="links">
+                <%= link_to_add_association '+Experiência', form, :experiences,class: "btn btn-primary"%>
+                <br><br>
+              </div>
+
+            </div>
+
+            <div col-md-12">
+  
+              <h4>Línguas</h4>
+
+              <div id="languages">
+                <%= form.simple_fields_for :languages do |xp| %>
+                  <%= render 'language_fields', f: xp %>
+                <% end %>
+              </div>
+
+
+              <div class="links">
+                <%= link_to_add_association '+Línguas', form, :languages,class: "btn btn-primary"%>
+                <br><br>
+              </div>
+
+
+            </div>
 
             <hr class="mb-4">
             <%= form.button :submit ,class: "btn btn-primary btn-lg btn-block" %>

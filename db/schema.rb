@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 2018_06_08_150625) do
 
   create_table "academies", force: :cascade do |t|
     t.string "name"
-    t.string "begin_date"
-    t.string "end_date"
+    t.date "begin_date"
+    t.date "end_date"
     t.bigint "creator_id"
     t.text "note"
     t.datetime "created_at", null: false
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2018_06_08_150625) do
 
   create_table "creators", force: :cascade do |t|
     t.string "name"
-    t.string "birthday"
+    t.date "birthday"
     t.string "description"
     t.string "cpf"
     t.string "email"
@@ -37,8 +37,8 @@ ActiveRecord::Schema.define(version: 2018_06_08_150625) do
   end
 
   create_table "experiences", force: :cascade do |t|
-    t.string "begin_date"
-    t.string "end_date"
+    t.date "begin_date"
+    t.date "end_date"
     t.string "name"
     t.text "note"
     t.string "address"

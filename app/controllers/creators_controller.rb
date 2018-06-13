@@ -69,6 +69,9 @@ class CreatorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def creator_params
-      params.require(:creator).permit(:name, :birthday, :description, :cpf, :email)
+      params.require(:creator).permit(:name, :birthday, :description, :cpf, :email,
+        academies_attributes: [:id, :name, :begin_date,:end_date,:note, :_destroy],
+        experiences_attributes: [:id, :name, :begin_date,:end_date,:note,:address, :_destroy],
+        languages_attributes: [:id, :name, :level, :_destroy])
     end
 end

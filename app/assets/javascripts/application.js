@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery3
+//= require jquery_ujs
 //= require rails-ujs
 //= require popper
 //= require bootstrap
@@ -23,6 +24,7 @@
 //=require material-dashboard
 //=require demo
 //=require app
+//= require cocoon
 //= require activestorage
 //= require_tree .
 

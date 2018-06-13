@@ -1,0 +1,22 @@
+<div class="row nested-fields">
+
+              <div class="col-md-4 mb-3">
+                <%= f.input :name ,class: "form-control"%>
+              </div>              
+
+              <div class="col-md-4 mb-3">
+                <%= f.input :begin_date,as: :date,class: "form-control",html5: true %>
+              </div>
+
+              <div class="col-md-4 mb-3">
+                <%= f.input :end_date ,as: :date,class: "form-control" ,html5: true%>
+              </div> 
+
+              <div class="col-md-8 mb-3">
+                <%= f.input :note ,class: "form-control"%>
+              </div>  
+
+              <div class="col-md-3 mb-3">
+                <%= link_to_remove_association "remover Educação", f,class: "btn btn-danger"%>         
+              </div>  
+</div>

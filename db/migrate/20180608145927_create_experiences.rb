@@ -1,8 +1,8 @@
 class CreateExperiences < ActiveRecord::Migration[5.2]
   def change
     create_table :experiences do |t|
-      t.string :begin_date
-      t.string :end_date
+      t.date :begin_date
+      t.date :end_date
       t.string :name
       t.text :note
       t.string :address
