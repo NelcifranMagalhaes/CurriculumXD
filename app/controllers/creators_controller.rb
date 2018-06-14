@@ -10,6 +10,15 @@ class CreatorsController < ApplicationController
   # GET /creators/1
   # GET /creators/1.json
   def show
+
+    respond_to do |format|
+       format.html
+       format.pdf do
+         render pdf: "Curriculun",
+         template: "creators/show.pdf.erb",
+         layout: 'pdf.html'
+       end
+      end
   end
 
   # GET /creators/new
