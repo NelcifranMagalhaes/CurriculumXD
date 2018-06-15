@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> A generator of curriculum to pdf in Rails
+> In development.....
 
-Things you may want to cover:
+## Setup project:
 
-* Ruby version
+## Ruby version
+	2.4.3
+## Rails Version
+	5.2.0	
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Download or clone this repository
+	> Run theses commands:
+```sh
+- bundle install
+- rails db:setup
+```
