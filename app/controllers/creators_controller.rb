@@ -37,7 +37,7 @@ class CreatorsController < ApplicationController
 
     respond_to do |format|
       if @creator.save
-        format.html { redirect_to @creator, notice: 'Creator was successfully created.' }
+        format.html { redirect_to @creator, notice: 'Currículo Criado com sucesso.' }
         format.json { render :show, status: :created, location: @creator }
       else
         format.html { render :new }
@@ -51,7 +51,7 @@ class CreatorsController < ApplicationController
   def update
     respond_to do |format|
       if @creator.update(creator_params)
-        format.html { redirect_to @creator, notice: 'Creator was successfully updated.' }
+        format.html { redirect_to @creator, notice: 'Curriculo Editado com sucesso.' }
         format.json { render :show, status: :ok, location: @creator }
       else
         format.html { render :edit }
@@ -65,7 +65,7 @@ class CreatorsController < ApplicationController
   def destroy
     @creator.destroy
     respond_to do |format|
-      format.html { redirect_to creators_url, notice: 'Creator was successfully destroyed.' }
+      format.html { redirect_to creators_url, notice: 'Currículo deletado com sucesso.' }
       format.json { head :no_content }
     end
   end

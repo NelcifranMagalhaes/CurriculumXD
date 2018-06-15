@@ -28,7 +28,7 @@
                           <% @creators.each do |creator| %>
                             <tr>
                               <td><%= creator.name %></td>
-                              <td><%= creator.birthday %></td>
+                              <td><%= l creator.birthday %></td>
                               <td><%= creator.email %></td>
                               <td><%= link_to 'Ver', creator,class:"btn btn-link" %></td>
                               <td><%= link_to 'Editar', edit_creator_path(creator),class:"btn btn-link" %></td>

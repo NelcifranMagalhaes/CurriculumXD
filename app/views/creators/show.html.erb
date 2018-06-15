@@ -30,7 +30,7 @@
 
                     </div>
                     <div class="col-md-6">
-                        <h4 class="card-title">Dados Profissionais</h4>
+                        <h4 class="card-title">Dados Acadêmicos</h4>
 
                         <% @creator.academies.each do |academy| %>
                         <div class="alert alert-success">
@@ -42,6 +42,34 @@
 
                         <% end %>
                     </div>
+
+                    <div class="col-md-6">
+                        <h4 class="card-title">Línguas</h4>
+
+                        <% @creator.languages.each do |linguas| %>
+                        <div class="alert alert-success">
+                            <span><b> Língua - </b> <%= linguas.name %></span>
+                            <span><b> Nível - </b> <%= linguas.level %></span>
+                        </div>
+
+                        <% end %>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h4 class="card-title">Experiências</h4>
+
+                        <% @creator.experiences.each do |experience| %>
+                        <div class="alert alert-info">
+                            <span><b> Nome - </b> <%= experience.name %></span>
+                            <span><b> Data Inicial - </b> <%= l experience.begin_date %></span>
+                            <span><b> Data Final - </b> <%= l experience.end_date %></span>
+                            <span><b> Endereço - </b> <%= experience.address %></span>
+                            <span><b> Descrição - </b> <%= experience.note %></span>
+                        </div>
+
+                        <% end %>
+                    </div>
+
                 </div>
             </div>
             <div class="col-md-12">

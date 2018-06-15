@@ -1,48 +1,144 @@
-<div class="content">
-    <div class="container-fluid">
-        <div class="card">
-            <div class="card-header card-header-primary">
-                <h3 class="card-title"><%= @creator.name %></h3>
 
-            </div>
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h4 class="card-title">Dados Pessoais</h4>
-                        <div class="alert alert-info">
-                          <span>
-                                <b> Data de Nascimento - </b><%= @creator.birthday %></span>
-                        </div>
-                        <div class="alert alert-info">
-                          <span>
-                                <b> CPF - </b><%= @creator.cpf %></span>
-                        </div>
-                        <div class="alert alert-info">
-                          <span>
-                                <b> Email - </b><%= @creator.email %></span>
-                        </div>
-                        <div class="alert alert-info">
-                          <span>
-                                <b> Descrição - </b><%= @creator.description %></span>
-                        </div>
+<html>
+<head>
 
-                    </div>
-                    <div class="col-md-6">
-                        <h4 class="card-title">Dados Profissionais</h4>
+    <title>Jonathan Doe | Web Designer, Director | name@yourdomain.com</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+</head>
+<body>
+
+<div id="doc2" class="yui-t7">
+    <div id="inner">
+    
+        <div id="hd">
+            <div class="yui-gc">
+                <div class="yui-u first">
+                    <h1><%= @creator.name %></h1>
+                    <h2>Web Designer, Director</h2>
+                </div>
+
+                <div class="yui-u">
+                    <div class="contact-info">
+                        <h3><a href="mailto:name@yourdomain.com"><%= @creator.email %></a></h3>
+                        <h3>(313) - 867-5309</h3>
+                    </div><!--// .contact-info -->
+                </div>
+            </div><!--// .yui-gc -->
+        </div><!--// hd -->
+
+        <div id="bd">
+            <div id="yui-main">
+                <div class="yui-b">
+
+                    <div class="yui-gf">
+                        <div class="yui-u first">
+                            <h2>Apresentação</h2>
+                        </div>
+                        <div class="yui-u">
+                            <p class="enlarge">
+                                <%= @creator.description %> 
+                            </p>
+                        </div>
+                    </div><!--// .yui-gf -->
+
+                    <div class="yui-gf">
+                        <div class="yui-u first">
+                            <h2>Línguas</h2>
+                        </div>
+                        <div class="yui-u">
+                        <% @creator.languages.each do |linguas| %>
+
+                                <div class="talent">
+                                    <h2><%= linguas.name %></h2>
+                                    <p><%= linguas.level %></p>
+                                </div>
+                        <% end %>
+                        </div>
+                    </div><!--// .yui-gf -->
+
+                    <div class="yui-gf">
+                        <div class="yui-u first">
+                            <h2>Technical</h2>
+                        </div>
+                        <div class="yui-u">
+                            <ul class="talent">
+                                <li>XHTML</li>
+                                <li>CSS</li>
+                                <li class="last">Javascript</li>
+                            </ul>
+
+                            <ul class="talent">
+                                <li>Jquery</li>
+                                <li>PHP</li>
+                                <li class="last">CVS / Subversion</li>
+                            </ul>
+
+                            <ul class="talent">
+                                <li>OS X</li>
+                                <li>Windows XP/Vista</li>
+                                <li class="last">Linux</li>
+                            </ul>
+                        </div>
+                    </div><!--// .yui-gf-->
+
+                    <div class="yui-gf">
+    
+                        <div class="yui-u first">
+                            <h2>Experiência</h2>
+                        </div><!--// .yui-u -->
+
+                        <% @creator.experiences.each do |experience| %>
+                        <div class="yui-u">
+
+                            <div class="job">
+                                <h2><%= experience.name %></h2>
+                                <h3>Senior Interface Designer</h3>
+                                <h4><%= experience.begin_date.year %>-<%= experience.end_date.year %></h4>
+                                <p><%= experience.note %></p>
+                            </div>
+
+                        </div><!--// .yui-u -->
+                            <% end %>
+                    </div><!--// .yui-gf -->
+
+
+                    <div class="yui-gf last">
+                        <div class="yui-u first">
+                            <h2>Educação</h2>
+                        </div>
 
                         <% @creator.academies.each do |academy| %>
-                        <div class="alert alert-success">
-                            <span><b> Nome - </b> <%= academy.name %></span>
-                            <span><b> Data Inicial - </b> <%= l academy.begin_date %></span>
-                            <span><b> Data Final - </b> <%= l academy.end_date %></span>
-                            <span><b> Descrição - </b> <%= academy.note %></span>
+
+                        <div class="yui-u">
+                            <div class="job">
+
+                                <h2><%= academy.name %> - <%= academy.begin_date.year %> / <%=academy.end_date.year %></h2>
+                                <h3><%= academy.note %> </h3>
+                            </div>
                         </div>
-
                         <% end %>
-                    </div>
-                </div>
-            </div>
 
-        </div>
-    </div>
-</div>
+                    </div><!--// .yui-gf -->
+
+
+                </div><!--// .yui-b -->
+            </div><!--// yui-main -->
+        </div><!--// bd -->
+
+        <div id="ft">
+            <p>Feito em CurriculumXD &mdash; <a href="mailto:name@yourdomain.com">name@yourdomain.com</a> &mdash; (313) - 867-5309</p>
+        </div><!--// footer -->
+
+    </div><!-- // inner -->
+
+
+</div><!--// doc -->
+
+
+</body>
+</html>
+
