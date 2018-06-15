@@ -1,23 +1,29 @@
 <div class="row nested-fields">
 
               <div class="col-md-6 mb-3">
-                <%= f.input :name ,label: false,placeholder: 'Nome',class: "form-control"%>
+                <label class="bmd-label-floating">Nome</label>
+                <%= f.input :name ,label: false,class: "form-control"%>
               </div>              
 
               <div class="col-md-6 mb-3">
-                <%= f.input :begin_date,as: :date,html5: true,class: "form-control" %>
+                <label class="bmd-label-floating">Data Inicial</label>
+                <%= f.input :begin_date,as: :date,html5: true,label: false,class: "form-control"%>
               </div>
 
               <div class="col-md-6 mb-3">
-                <%= f.input :end_date,as: :date ,html5: true,class: "form-control"%>
+                <label class="bmd-label-floating">Data Final</label>
+
+                <%= f.input :end_date,as: :date ,html5: true,label: false,class: "form-control"%>
               </div> 
 
               <div class="col-md-6 mb-3">
-                <%= f.input :address ,label: false,placeholder: 'Endereço',class: "form-control"%>
+                <label class="bmd-label-floating">Endereço</label>
+                <%= f.input :address ,label: false,class: "form-control"%>
               </div>
 
               <div class="col-md-6 mb-3">
-                <%= f.input :note ,label: false,placeholder: 'Desccrição',class: "form-control"%>
+                <label class="bmd-label-floating">Descrição</label>
+                <%= f.input :note ,label: false,class: "form-control"%>
               </div>     
 
               <div class="col-md-3 mb-3">

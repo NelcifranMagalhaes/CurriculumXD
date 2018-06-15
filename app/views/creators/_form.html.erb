@@ -3,24 +3,29 @@
   <div class="row">
 
               <div class="col-md-6 mb-3">
-                <%= form.input :name,placeholder: 'Nome',label: false ,class: "form-control"%>
+                <label class="bmd-label-floating">Nome</label>
+                <%= form.input :name,label: false ,class: "form-control"%>
               </div>              
 
               <div class="col-md-3 mb-3">
-                <%= form.input :birthday,as: :date,html5: true,placeholder: 'Data de Nascimento',class: "form-control" ,label: false%>
+                <label class="bmd-label-floating">Data de Nascimento</label>
+                <%= form.input :birthday,as: :date,html5: true,class: "form-control",label: false %>
 
               </div>
 
               <div class="col-md-6 mb-3">
-                <%= form.input :description ,placeholder: 'Descrição',class: "form-control",label: false%>
+                <label class="bmd-label-floating">Descrição</label>
+                <%= form.input :description ,class: "form-control",label: false%>
               </div>              
 
               <div class="col-md-6 mb-3">
-                <%= form.input :cpf ,placeholder: 'CPF',class: "form-control",label: false%>
+                <label class="bmd-label-floating">CPF</label>
+                <%= form.input :cpf ,class: "form-control",label: false%>
               </div>
 
               <div class="col-md-6 mb-3">
-                <%= form.input :email ,placeholder: 'Email',class: "form-control",label: false%>
+                <label class="bmd-label-floating">Email</label>
+                <%= form.input :email,class: "form-control",label: false%>
               </div>
               
             <div col-md-12">

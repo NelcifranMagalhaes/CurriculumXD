@@ -6,9 +6,6 @@ feature 'Welcome', type: :feature do
 		expect(page).to have_content('Crie seu Curriculum')
 	end
 
-	scenario 'Verificar o link de cadastro de Curriculum' do
-	  visit(root_path)
-	  expect(find('ul li')).to have_link('Criar Curriculum')  
-	end
+
 
 end
