@@ -1,1 +1,5 @@
-*.rb linguist-language=Ruby
+*.rb linguist-language=ruby
+app/assets/* linguist-vendored
+
+*.js linguist-vendored=false
+*.scss linguist-vendored=false
