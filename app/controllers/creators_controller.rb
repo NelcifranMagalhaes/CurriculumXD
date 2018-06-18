@@ -1,5 +1,6 @@
 class CreatorsController < ApplicationController
   before_action :set_creator, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /creators
   # GET /creators.json

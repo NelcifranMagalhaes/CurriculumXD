@@ -68,4 +68,4 @@ gem 'simple_form'
 gem "cocoon"
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
-
+gem 'devise'

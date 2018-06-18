@@ -1,0 +1,31 @@
+<h2>Cadastro</h2>
+
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="row">
+
+  	<div class="col-md-6 mb-3">
+  	  <label class="bmd-label-floating">Email</label>
+    	<%= f.input :email, required: true, autofocus: true,label: false ,class: "form-control" %>
+  	</div>
+  	<div class="col-md-6 mb-3">
+  	  <label class="bmd-label-floating">Senha</label>
+    	<%= f.input :password, required: true,label: false,class: "form-control" ,hint: ("#{@minimum_password_length} número mínimo de caracteres." if @minimum_password_length) %>
+	</div>
+
+	<div class="col-md-6 mb-3">
+		<label class="bmd-label-floating">Confirmação de senha</label>
+	  	<%= f.input :password_confirmation, required: true,label: false ,class: "form-control" %>
+	</div>	
+
+  </div>
+
+  <div class="row">
+    <%= f.button :submit, "Cadastre-se",class: "btn btn-primary btn-lg" %>
+  </div>
+<% end %>
+
+<div class="row">
+	<%= render "devise/shared/links" %>
+</div>
