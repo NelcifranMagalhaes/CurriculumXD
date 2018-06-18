@@ -13,11 +13,15 @@
                         <h4 class="card-title">Dados Pessoais</h4>
                         <div class="alert alert-info">
                           <span>
-                                <b> Data de Nascimento - </b><%= @creator.birthday %></span>
+                                <b> Data de Nascimento - </b><%=l @creator.birthday %></span>
                         </div>
                         <div class="alert alert-info">
                           <span>
                                 <b> CPF - </b><%= @creator.cpf %></span>
+                        </div>
+                        <div class="alert alert-info">
+                          <span>
+                            <b> Telefone - </b><%=  number_to_phone(@creator.phone_number,pattern: /(\d{1,4})(\d{4})(\d{4})$/, area_code: true)%></span>
                         </div>
                         <div class="alert alert-info">
                           <span>
@@ -65,6 +69,17 @@
                             <span><b> Data Final - </b> <%= l experience.end_date %></span>
                             <span><b> Endereço - </b> <%= experience.address %></span>
                             <span><b> Descrição - </b> <%= experience.note %></span>
+                        </div>
+
+                        <% end %>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h4 class="card-title">Habilidades</h4>
+
+                        <% @creator.skills.each do |skill| %>
+                        <div class="alert alert-info">
+                            <span><%= skill.name %></span>
                         </div>
 
                         <% end %>

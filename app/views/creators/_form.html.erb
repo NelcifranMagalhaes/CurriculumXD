@@ -10,7 +10,11 @@
               <div class="col-md-3 mb-3">
                 <label class="bmd-label-floating">Data de Nascimento</label>
                 <%= form.input :birthday,as: :date,html5: true,class: "form-control",label: false %>
+              </div>
 
+              <div class="col-md-3 mb-3">
+                <label class="bmd-label-floating">Telefone</label>
+                <%= form.input :phone_number,class: "form-control",label: false %>
               </div>
 
               <div class="col-md-6 mb-3">
@@ -27,7 +31,11 @@
                 <label class="bmd-label-floating">Email</label>
                 <%= form.input :email,class: "form-control",label: false%>
               </div>
-              
+  </div>    
+
+
+  <div class="row">
+
             <div col-md-12">
   
               <h4>Educação</h4>
@@ -44,43 +52,67 @@
               </div>
             </div>
 
-            <div col-md-12">
-  
-              <h4>Experiência</h4>
+  </div>
 
-              <div id="experiences">
-                <%= form.simple_fields_for :experiences do |xp| %>
-                  <%= render 'experience_fields', f: xp %>
-                <% end %>
-              </div>
+  <div class="row">
+    <div col-md-12">
+    
+      <h4>Experiência</h4>
 
-              <div class="links">
-                <%= link_to_add_association '+Experiência', form, :experiences,class: "btn btn-primary"%>
-                <br><br>
-              </div>
+      <div id="experiences">
+        <%= form.simple_fields_for :experiences do |xp| %>
+          <%= render 'experience_fields', f: xp %>
+        <% end %>
+      </div>
 
-            </div>
+      <div class="links">
+        <%= link_to_add_association '+Experiência', form, :experiences,class: "btn btn-primary"%>
+        <br><br>
+      </div>
 
-            <div col-md-12">
-  
-              <h4>Línguas</h4>
+    </div>
+  </div>
 
-              <div id="languages">
-                <%= form.simple_fields_for :languages do |xp| %>
-                  <%= render 'language_fields', f: xp %>
-                <% end %>
-              </div>
+  <div class="row">
+    <div col-md-12">
+    
+      <h4>Línguas</h4>
 
-
-              <div class="links">
-                <%= link_to_add_association '+Línguas', form, :languages,class: "btn btn-primary"%>
-                <br><br>
-              </div>
+      <div id="languages">
+        <%= form.simple_fields_for :languages do |xp| %>
+          <%= render 'language_fields', f: xp %>
+        <% end %>
+      </div>
 
 
-            </div>
+      <div class="links">
+        <%= link_to_add_association '+Línguas', form, :languages,class: "btn btn-primary"%>
+        <br><br>
+      </div>
 
-            <hr class="mb-4">
-            <%= form.button :submit ,class: "btn btn-primary btn-lg btn-block" %>
-</div>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div col-md-12">
+    
+      <h4>Habilidades</h4>
+
+      <div id="skills">
+        <%= form.simple_fields_for :skills do |sk| %>
+          <%= render 'skill_fields', f: sk %>
+        <% end %>
+      </div>
+
+      <div class="links">
+        <%= link_to_add_association '+Skill', form, :skills,class: "btn btn-primary"%>
+        <br><br>
+      </div>
+
+    </div>
+  </div>
+
+  <hr class="mb-4">
+  <%= form.button :submit ,class: "btn btn-primary btn-lg btn-block" %>
 <% end %>

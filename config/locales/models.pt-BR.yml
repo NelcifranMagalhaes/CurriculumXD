@@ -5,6 +5,7 @@ pt-BR:
       creator: Currículo
       experience: Experiência
       language: Língua
+      skill: Habilidade
 
     attributes:  
       academy:
@@ -19,6 +20,7 @@ pt-BR:
         description: Descrição
         cpf: Cpf
         email: Email
+        phone_number: Telefone
 
       experience:
         name: Nome
@@ -30,3 +32,6 @@ pt-BR:
       language:
         name: Nome
         level: Nível
+
+      skill:
+        name: Nome
