@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<div class="col-md-12">
+    <div class="card card-plain">
+        <div class="card-header card-header-primary">
+            <h4 class="card-title mt-0"> Usuários do sistema</h4>
+            <p class="card-category">Apenas uma tabela com todos os usuários cadastrados</p>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead class="">
+                        <th>
+                            Email
+                        </th>
+
+                          <th colspan="3">Ações</th>
+
+                    </thead>
+                        <tbody>
+                          <% @users.each do |user| %>
+                            <tr>
+                              <td><%= user.email %></td>
+                              <td><%= link_to 'Ver', user,class:"btn btn-link" %></td>
+                              <td><%= link_to 'Editar', edit_user_path(user),class:"btn btn-link" %></td>
+                              <td><%= link_to 'Deletar', user,class:"btn btn-link", method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
+                            </tr>
+                          <% end %>
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
