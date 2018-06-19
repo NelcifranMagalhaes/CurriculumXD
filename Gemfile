@@ -69,3 +69,5 @@ gem "cocoon"
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 gem 'devise'
+gem 'cancancan', '~> 2.0'
+gem "rolify"

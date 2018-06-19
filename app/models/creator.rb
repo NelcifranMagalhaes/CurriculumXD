@@ -3,6 +3,8 @@ class Creator < ApplicationRecord
 	has_many :experiences,inverse_of: :creator,dependent: :destroy
 	has_many :languages,inverse_of: :creator,dependent: :destroy
 	has_many :skills,inverse_of: :creator,dependent: :destroy
+  	belongs_to :user
+
 	
 	accepts_nested_attributes_for :academies, reject_if: :all_blank, allow_destroy: true
   	accepts_nested_attributes_for :experiences, reject_if: :all_blank, allow_destroy: true
@@ -16,5 +18,5 @@ class Creator < ApplicationRecord
 	validates :cpf,presence: true
 	validates :email,presence: true
 	validates :phone_number,presence: true,length: {is: 11}
-	
+	resourcify
 end

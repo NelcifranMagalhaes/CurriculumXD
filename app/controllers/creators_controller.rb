@@ -1,6 +1,7 @@
 class CreatorsController < ApplicationController
   before_action :set_creator, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  load_and_authorize_resource :only => [:index]
 
   # GET /creators
   # GET /creators.json
@@ -35,7 +36,7 @@ class CreatorsController < ApplicationController
   # POST /creators.json
   def create
     @creator = Creator.new(creator_params)
-
+    @creator.user_id = current_user.id
     respond_to do |format|
       if @creator.save
         format.html { redirect_to @creator, notice: 'Currículo Criado com sucesso.' }
@@ -79,7 +80,7 @@ class CreatorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def creator_params
-      params.require(:creator).permit(:name, :birthday, :description, :cpf, :email,:phone_number,
+      params.require(:creator).permit(:name, :birthday, :description, :cpf, :email,:phone_number,:user_id,
         academies_attributes: [:id, :name, :begin_date,:end_date,:note, :_destroy],
         experiences_attributes: [:id, :name, :begin_date,:end_date,:note,:address, :_destroy],
         languages_attributes: [:id, :name, :level, :_destroy],

@@ -35,22 +35,23 @@
                     <li class="nav-item ">
                         <%= link_to current_user,class: "nav-link" do %>
                             <i class="material-icons">person</i>
-                            Profile do Usuário
+                            <%= current_user.email %>
                         <% end %>
                     </li>
-
-                    <li class="nav-item ">
-                        <%= link_to creators_path,class: "nav-link" do %>
-                            <i class="material-icons">content_paste</i>
-                            Lista de Curriculos
-                        <% end %>
-                    </li>
-                    <li class="nav-item ">
-                        <%= link_to users_path,class: "nav-link" do %>
-                            <i class="material-icons">group</i>
-                            Lista de Usuários
-                        <% end %>
-                    </li>
+                    <% if  current_user.has_role? :admin%>
+                        <li class="nav-item ">
+                            <%= link_to creators_path,class: "nav-link" do %>
+                                <i class="material-icons">content_paste</i>
+                                Lista de Curriculos
+                            <% end %>
+                        </li>
+                        <li class="nav-item ">
+                            <%= link_to users_path,class: "nav-link" do %>
+                                <i class="material-icons">group</i>
+                                Lista de Usuários
+                            <% end %>
+                        </li>
+                    <% end %>
 
                     <li class="nav-item dropdown">
                         <a class="nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
