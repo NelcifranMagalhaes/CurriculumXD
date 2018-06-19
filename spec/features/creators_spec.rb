@@ -8,6 +8,7 @@ feature "Creators", type: :feature do
 
 	scenario 'Cadastrar novo Curriculum' do
 	 	visit(new_creator_path)
+	 	sign_in users_url(:bob)
 	 	fill_in(name:'creator[name]',with: Faker::Name.name)
 	 	fill_in(name:'creator[email]',with: Faker::Internet.email)
 	 	fill_in(name:'creator[birthday]', with: Faker::Date.birthday(18, 65))
