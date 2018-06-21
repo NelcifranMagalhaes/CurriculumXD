@@ -1,20 +1,50 @@
-<div align="center" class="col-lg-3 col-md-6 col-sm-6">
-    <%= link_to new_creator_path do %>
-    <div class="card card-stats">
-        <div class="card-header card-header-warning card-header-icon">
-            <div class="card-icon">
-               <i class="material-icons">content_copy</i>
+
+<div class="row">
+    <div class="col-md-4">
+        <%= link_to new_creator_path do %>
+            <div class="card card-chart">
+                <div class="card-header card-header-success">
+                    <div class="ct-chart" id="dailySalesChart"></div>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Crie seu Currículo</h4>
+                    <p class="card-category">
+                        <span class="text-success"><i class="fa fa-long-arrow-up"></i> XD </span>Totalmente Grátis</p>
+                </div>
+
             </div>
-            <p class="card-category">XD</p>
-            <h3 class="card-title">Crie seu Curriculum
-                <small>Totalmente Grátis</small>
-            </h3>
-        </div>
-        <div class="card-footer">
-            <div class="stats">
-                <i class="material-icons text-danger">work_outline</i>
-            </div>
-        </div>
+        <% end %>
     </div>
-    <% end %>
+
+
+    <div class="col-md-4">
+        <%= link_to questions_path do %>
+            <div class="card card-chart">
+                <div class="card-header card-header-warning">
+                    <div class="ct-chart" id="websiteViewsChart"></div>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Dúvidas</h4>
+                    <p class="card-category">
+                        <span class="text-success"><i class="fa fa-long-arrow-up"></i> XD </span>Mande suas dúvidas.</p>
+                </div>
+            </div>
+        <% end %>
+    </div>
+
+    <div class="col-md-4">
+        <%= link_to frequently_questions_path do %>
+            <div class="card card-chart">
+                <div class="card-header card-header-danger">
+                    <div class="ct-chart" id="completedTasksChart"></div>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Perguntas Frequentes</h4>
+                    <p class="card-category">
+                        <span class="text-success"><i class="fa fa-long-arrow-up"></i> XD </span>Leia dúvidas de outras pessoas</p>
+                </div>
+            </div>
+        <% end %>
+    </div>
+
 </div>

@@ -3,4 +3,8 @@ Rails.application.routes.draw do
   resources :creators
   resources :users
   root to: "welcome#index"
+
+  get 'questions', to: 'welcome#questions'
+  get 'frequently_questions', to: 'welcome#frequently_questions'
+
 end

@@ -16,3 +16,6 @@
 - bundle install
 - rails db:setup
 ```
+## System in Production
+
+> You can make your Curriculum in [CurriculumXD](https://curriculumxd.herokuapp.com/)
