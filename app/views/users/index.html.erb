@@ -14,7 +14,7 @@
                             Email
                         </th>
 
-                          <th colspan="3">Ações</th>
+                          <th colspan="2">Ações</th>
 
                     </thead>
                         <tbody>
@@ -22,7 +22,7 @@
                             <tr>
                               <td><%= user.email %></td>
                               <td><%= link_to 'Ver', user,class:"btn btn-link" %></td>
-                              <td><%= link_to 'Editar', edit_user_path(user),class:"btn btn-link" %></td>
+
                               <td><%= link_to 'Deletar', user,class:"btn btn-link", method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
                             </tr>
                           <% end %>
