@@ -18,7 +18,7 @@
             <div class="yui-gc">
                 <div class="yui-u first">
                     <h1><%= @creator.name if @creator.name.present?%></h1>
-                    <h2><%= @creator.experiences.last.name if @creator.experiences.last.name.present?%></h2>
+                    <h2><%= @creator.experiences.last.name if @creator.experiences.size > 0%></h2>
                 </div>
 
                 <div class="yui-u">
@@ -84,7 +84,6 @@
 
                             <div class="job">
                                 <h2><%= experience.name %></h2>
-                                <h3>Senior Interface Designer</h3>
                                 <h4><%= experience.begin_date.year %>-<%= experience.end_date.year %></h4>
                                 <p><%= experience.note %></p>
                             </div>
