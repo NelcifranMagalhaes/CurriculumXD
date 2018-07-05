@@ -1,20 +1,17 @@
-<div class="content">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="card card-profile">
-                    <div class="card-avatar">
-                        <a href="#pablo">
-                            <img class="img" />
-                        </a>
-                    </div>
-                    <div class="card-body">
-                        <h6 class="card-category text-gray">CurriculumXD</h6>
-                        <h4 class="card-title">naltispace@gmail.com</h4>
-                        <p class="card-description">
-                            Mande um email.
-                        </p>
-                    </div>
-                </div>
+<%= form_tag(questions_path, method: "get", class: "form-inline") do |f| %>
+        <div class="col-md-12">
+
+          <div class="form-group">
+            <%= text_field_tag :email, nil, value: params[:email], placeholder: "Email",required: true, class: "form-control col-sm-10" %>
+          </div>
+
+          <div class="form-group">
+            <%= text_area_tag :description, nil,size: "25x10", value: params[:description], placeholder: "Descrição",required: true, class: "form-control col-sm-10" %>
+          </div>
+
+          <div class="form-group">
+            <%= submit_tag "Enviar", class: "btn btn-primary btn-sm form-control col-sm-1" %>
+          </div>
+
         </div>
-    </div>
-</div>
+<% end %>
