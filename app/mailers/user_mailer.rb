@@ -4,7 +4,7 @@ class UserMailer < ApplicationMailer
 
 	def email_questions(email,corpo)
 
-		mail(to: 'naltispace@gmail.com', subject: 'Mensagem do CurriculumXD',
+		mail(to: 'naltispace@gmail.com',from: email, subject: 'Mensagem do CurriculumXD',
 			body: corpo,content_type: 'text/html')
 		# mail = Mail.new do
 		#   from    email
@@ -14,5 +14,4 @@ class UserMailer < ApplicationMailer
 		# end
 		
 	end
-
 end
