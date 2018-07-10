@@ -75,7 +75,10 @@ Rails.application.configure do
   config.i18n.fallbacks = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = { :host => "https://curriculumxd.herokuapp.com" }
-  config.action_mailer.smtp_settings = {address: "https://curriculumxd.herokuapp.com", port: 587 }
+  config.action_mailer.smtp_settings = {
+  address:        'smtp.curriculumxd.herokuapp.com', # default: localhost
+  port:           '587'
+}
   config.action_mailer.default :charset => "utf-8"
 
   # Send deprecation notices to registered listeners.
