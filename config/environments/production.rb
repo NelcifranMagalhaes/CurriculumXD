@@ -9,7 +9,6 @@ Rails.application.configure do
   # and those relying on copy on write to perform better.
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
-  config.action_mailer.smtp_settings = { port: 587 }
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
@@ -76,6 +75,17 @@ Rails.application.configure do
   config.i18n.fallbacks = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = { :host => "https://curriculumxd.herokuapp.com" }
+  config.action_mailer.smtp_settings = {address: "https://curriculumxd.herokuapp.com", port: 587 }
+  config.action_mailer.default :charset => "utf-8"
+  
+config.action_mailer.smtp_settings = {
+  address: 'smtp.gmail.com',
+  port: 587,
+  user_name: ENV['gmail_username'],
+  password: ENV['gmail_password'],
+  authentication: 'plain',
+  enable_starttls_auto: true
+}
 
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
