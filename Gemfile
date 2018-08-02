@@ -72,3 +72,4 @@ gem 'devise'
 gem 'cancancan', '~> 2.0'
 gem "rolify"
 gem 'mail'
+gem "font-awesome-rails"

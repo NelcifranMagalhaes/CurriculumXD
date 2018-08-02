@@ -18,25 +18,10 @@
 //= require bootstrap-sprockets
 //=require bootstrap-material-design
 //=require perfect-scrollbar.jquery.min
-//=require chartist.min
 //=require arrive.min
 //=require bootstrap-notify
 //=require material-dashboard
-//=require demo
 //=require app
 //= require cocoon
 //= require activestorage
 //= require_tree .
-
-    $(document).ready(function() {
-
-        //init wizard
-
-        // demo.initMaterialWizard();
-
-        // Javascript method's body can be found in assets/js/demos.js
-        demo.initDashboardPageCharts();
-
-        demo.initCharts();
-
-    });
