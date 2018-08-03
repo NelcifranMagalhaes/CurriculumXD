@@ -26,3 +26,12 @@
 //= require tinymce
 //= require activestorage
 //= require_tree .
+
+
+
+$(document).ready(function(){
+
+  if (typeof tinyMCE != 'undefined') {
+    tinyMCE.init();
+  }
+});
