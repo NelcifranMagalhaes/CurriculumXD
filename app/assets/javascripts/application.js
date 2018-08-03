@@ -23,5 +23,6 @@
 //=require material-dashboard
 //=require app
 //= require cocoon
+//= require tinymce
 //= require activestorage
 //= require_tree .

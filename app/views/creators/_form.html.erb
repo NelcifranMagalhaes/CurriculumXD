@@ -12,14 +12,11 @@
                 <%= form.input :birthday,as: :date,html5: true,class: "form-control",label: false %>
               </div>
 
-              <div class="col-md-3 mb-3">
-                <label class="bmd-label-floating">Telefone</label>
-                <%= form.input :phone_number,class: "form-control",label: false %>
-              </div>
-
               <div class="col-md-6 mb-3">
                 <label class="bmd-label-floating">Descrição</label>
-                <%= form.input :description ,class: "form-control",label: false%>
+                <%= tinymce %>
+                <%= form.text_area :description, class: "tinymce form-control", label: false,rows: 20, cols: 50 %>
+
               </div>              
 
               <div class="col-md-6 mb-3">
@@ -32,7 +29,25 @@
                 <%= form.input :email,class: "form-control",label: false%>
               </div>
   </div>    
+  <div class="row">
 
+            <div col-md-12">
+  
+              <h4>Telefones</h4>
+
+              <div id="phones">
+                <%= form.simple_fields_for :phones do |phone| %>
+                  <%= render 'phone_fields', f: phone %>
+                <% end %>
+              </div>
+
+              <div class="links">
+                <%= link_to_add_association '+Telefone', form, :phones,class: "btn btn-primary"%>
+                <br><br>
+              </div>
+            </div>
+
+  </div>
 
   <div class="row">
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_19_131113) do
+ActiveRecord::Schema.define(version: 2018_08_03_132548) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,7 +35,6 @@ ActiveRecord::Schema.define(version: 2018_06_19_131113) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "phone_number"
     t.index ["user_id"], name: "index_creators_on_user_id"
   end
 
@@ -58,6 +57,14 @@ ActiveRecord::Schema.define(version: 2018_06_19_131113) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["creator_id"], name: "index_languages_on_creator_id"
+  end
+
+  create_table "phones", force: :cascade do |t|
+    t.string "number_phone"
+    t.bigint "creator_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["creator_id"], name: "index_phones_on_creator_id"
   end
 
   create_table "roles", force: :cascade do |t|
@@ -107,5 +114,6 @@ ActiveRecord::Schema.define(version: 2018_06_19_131113) do
   add_foreign_key "creators", "users"
   add_foreign_key "experiences", "creators"
   add_foreign_key "languages", "creators"
+  add_foreign_key "phones", "creators"
   add_foreign_key "skills", "creators"
 end

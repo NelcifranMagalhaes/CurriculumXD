@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.4.3'
+ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
@@ -39,7 +39,8 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 3.7'
   gem 'capybara'
-  gem 'faker'
+  gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+  gem "factory_bot_rails", "~> 4.0"
 end
 
 group :development do
@@ -73,3 +74,4 @@ gem 'cancancan', '~> 2.0'
 gem "rolify"
 gem 'mail'
 gem "font-awesome-rails"
+gem 'tinymce-rails'

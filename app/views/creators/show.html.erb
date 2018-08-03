@@ -21,7 +21,13 @@
                         </div>
                         <div class="alert alert-info">
                           <span>
-                            <b> Telefone - </b><%=  number_to_phone(@creator.phone_number,pattern: /(\d{1,4})(\d{4})(\d{4})$/, area_code: true)%></span>
+                            <b> Telefones - 
+                                <% @creator.phones.each do |phone| %>
+                                    <%= number_to_phone(phone.number_phone,pattern: /(\d{1,4})(\d{4})(\d{4})$/, area_code: true) %>
+                                    <br>
+                                <% end %>
+                            </b>
+                            </span>
                         </div>
                         <div class="alert alert-info">
                           <span>

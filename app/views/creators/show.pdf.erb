@@ -24,7 +24,11 @@
                 <div class="yui-u">
                     <div class="contact-info">
                         <h3><a href="mailto:name@yourdomain.com"><%= @creator.email %></a></h3>
-                        <h3><%= number_to_phone(@creator.phone_number,pattern: /(\d{1,4})(\d{4})(\d{4})$/, area_code: true)%></h3>
+                        <h3>
+                            <% @creator.phones.each do |phone| %>
+                                <%= number_to_phone(phone.number_phone,pattern: /(\d{1,4})(\d{4})(\d{4})$/, area_code: true) %><br>
+                            <% end %>
+                        </h3>
                     </div><!--// .contact-info -->
                 </div>
             </div><!--// .yui-gc -->
