@@ -1,4 +1,9 @@
-<p id="notice"><%= notice %></p>
+<% if notice.present?%>
+  <div class="alert alert-success" role="alert">
+    <p id="notice"><%= notice %></p>
+  </div>
+<% end %>
+
 <%= form_tag(questions_path, method: "get", class: "form-inline") do |f| %>
         <div class="col-md-12">
 
