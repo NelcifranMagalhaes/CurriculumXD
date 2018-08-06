@@ -77,7 +77,12 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { :host => "https://curriculumxd.herokuapp.com" }
   config.action_mailer.smtp_settings = {
   address:        'smtp.gmail.com', # default: localhost
-  port:           '465'
+  port:           '465',
+  domain: 'gmail.com',
+  user_name: ENV['GMAIL_ADDRESS'],
+  password: ENV['GMAIL_PASS'],
+  authentication: 'plain',
+  enable_starttls_auto: true
 }
   config.action_mailer.default :charset => "utf-8"
 
