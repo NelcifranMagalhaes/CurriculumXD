@@ -6,9 +6,11 @@ feature "Creators", type: :feature do
 	  expect(page).to have_xpath("//a") 
 	end
 
+
 	scenario 'Cadastrar novo Curriculum' do
+		user = FactoryBot.create(:user)
+		sign_in user
 	 	visit(new_creator_path)
-	 	sign_in users_url(:bob)
 	 	fill_in(name:'creator[name]',with: Faker::Name.name)
 	 	fill_in(name:'creator[email]',with: Faker::Internet.email)
 	 	fill_in(name:'creator[birthday]', with: Faker::Date.birthday(18, 65))
@@ -18,6 +20,8 @@ feature "Creators", type: :feature do
 	end
 
 	scenario 'Não cadastra sem preencher' do
+		user = FactoryBot.create(:user)
+		sign_in user
 		visit(new_creator_path)
 	 	click_on('Criar Currículo')
 	 	expect(page).to have_content('não pode ficar em branco')
