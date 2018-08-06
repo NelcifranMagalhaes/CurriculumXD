@@ -75,3 +75,4 @@ gem "rolify"
 gem 'mail'
 gem "font-awesome-rails"
 gem 'tinymce-rails'
+gem 'wdm', '>= 0.1.0'
